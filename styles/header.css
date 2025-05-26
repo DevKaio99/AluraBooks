@@ -1,0 +1,178 @@
+.cabecalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/Menu.jpg");
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--branco);
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.container__botao {
+    display: none;
+}
+
+.lista-menu__link {
+    text-decoration: none;
+    color: var(--texto-azul);
+    font-family: "Poppins", sans-serif;
+}
+
+.lista-menu__titulo {
+    color: var(--texto-laranja);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin: 24px;
+}
+
+.lista-menu__item {
+    margin: 24px 24px 16px 24px;
+
+}
+
+.container__titulo {
+    display: none;
+}
+
+.menu__pagina {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+.container__botao:checked ~ .container__label > .cabecalho__menu-hamburguer {
+    background-image: url(/assets/Menu\ Aberto.svg);
+    background-color: var(--texto-azul);
+}
+
+
+@media screen and (min-width: 1024px){
+    .container__titulo, .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+    }
+    .container__titulo {
+    color: black;
+    font-weight: 400;
+    display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+.menu {
+    display: flex;
+}
+
+.menu__pagina {
+    text-decoration: none;
+    margin: 0 1em;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-transform: uppercase;
+    display: block;
+}
+
+
+
+.cabecalho__menu-hamburguer {
+    display: none;
+}
+
+.favoritos-transparente {
+    display: none;
+}
+
+.categorias {
+    width: 20vw;
+}
+
+.container__imagem {
+    padding-left: 4em;
+}
+
+.container__botao:checked ~ .container__label > .menu__pagina {
+    background-color: var(--texto-azul);
+    color: var(--branco);
+
+}
+
+.menu__pagina {
+    padding: 1.5em 1em;
+}
+
+.lista-menu__item:hover {
+    background: var(--texto-azul);
+    
+}
+
+.lista-menu__item:hover > .lista-menu__link {
+    -webkit-text-fill-color: var(--branco);
+}
+
+}
+
+@media screen and (min-width: 1728px) {
+    .container__texto {
+        color: var(--preto);
+        display: block;
+        font-family: var(--fonte-principal);
+        font-size: 20px;
+    }
+
+    .container__link {
+        text-decoration: none;
+    }
+
+    .container__link {
+        display: flex;
+        align-items: center;
+    }
+
+    .container {
+        padding: 0 1em;
+    }
+
+    .menu {
+        margin-right: 30em;
+    }
+
+    .categorias {
+        width: 13vw;
+    }
+
+}
+
